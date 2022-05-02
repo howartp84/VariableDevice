@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<Devices>
+	<Device type="custom" id="variable">
+		<Name>Variable Device</Name>
+		<ConfigUI>
+			<Field type="list" id="vars" rows="30">
+				<Label>Variables:</Label>
+				<List class="indigo.variables"/>
+			</Field>
+			<Field id="lstateToDisplay" type="label">
+				<Label>Choose which of the variables to use as the UI device state:</Label>
+			</Field>
+			<Field type="menu" id="stateToDisplay">
+				<Label>State to display:</Label>
+				<List class="indigo.variables"/>
+			</Field>
+			<Field id="liconType" type="label">
+				<Label>Choose the icon and formatting displayed for the UI device state:</Label>
+			</Field>
+			<Field type="menu" id="iconType" defaultValue="Generic">
+				<Label>Display icon as:</Label>
+					<List>
+						<Option value="Generic">Generic</Option>
+						<Option value="Power">Power On/Off</Option>
+						<Option value="Motion">Motion Sensor</Option>
+						<Option value="TempF">Temperature (F)</Option>
+						<Option value="TempC">Temperature (C)</Option>
+						<Option value="Humidity">Humidity</Option>
+						<Option value="LumLux">Luminance (lux)</Option>
+						<Option value="LumPC">Luminance (%)</Option>
+					</List>
+			</Field>
+		</ConfigUI>
+		<States>
+			<State id="displayState">
+				<ValueType>String</ValueType>
+				<TriggerLabel>displayState</TriggerLabel>
+				<ControlPageLabel>displayState</ControlPageLabel>
+			</State>
+		</States>
+		<UiDisplayStateId>displayState</UiDisplayStateId>
+	</Device>
+</Devices>
