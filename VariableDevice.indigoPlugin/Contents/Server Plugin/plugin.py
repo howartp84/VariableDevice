@@ -83,7 +83,7 @@ class Plugin(indigo.PluginBase):
 					stateList.remove(varName)
 				dynamicState1 = self.getDeviceStateDictForStringType(varName,varName,varName)
 				stateList.append(dynamicState1)
-		return sorted(stateList)
+		return stateList
 
 	def deviceStartComm(self, dev):
 		self.debugLog(u"deviceStartComm called")
